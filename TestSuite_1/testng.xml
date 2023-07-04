@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestSuite_1">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="NetMemTypeProfileTest._1_NetMemTypeProfileTest"/>
+      <class name="NetMemTypeProfileTest._3_NMContractTest"/>
+      <class name="NetMemTypeProfileTest._2_NetworkMemberProfileTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- TestSuite_1 -->

@@ -3,19 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="NetMemTypeProfileTest._2_NetworkMemberProfileTest">
+      <class name="NetMemTypeProfileTest._1_NetMemTypeProfileTest">
         <methods>
-          <include name="addressTest"/>
-          <include name="test1"/>
-          <include name="ProviderConTest"/>
-          <include name="currencyTest"/>
-          <include name="memberGrpTest"/>
-          <include name="NMGroupTyTest"/>
-          <include name="nameTest"/>
-          <include name="setup"/>
+          <include name="eleTest"/>
           <include name="exit"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- NetMemTypeProfileTest._2_NetworkMemberProfileTest -->
+      </class> <!-- NetMemTypeProfileTest._1_NetMemTypeProfileTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

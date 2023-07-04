@@ -2,6 +2,7 @@ package Utility;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Date;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -13,7 +14,7 @@ import org.openqa.selenium.io.FileHandler;
 public class CommonFile {
 	
 public static WebDriver driver;
-	
+//NETWORK MEMBER TYPE PROFILE	
 	public static String readExcelFile(int row,int col) throws Exception
 	{
 		FileInputStream file=new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\HIMS_P\\TestData\\HIMS_NEW_DATA (1).xlsx");
@@ -22,11 +23,27 @@ public static WebDriver driver;
 	 	return value;
 	}
 	
-	
+//NETWORK MEMBER PROFILE
 	public static String readExcel(int row,int col) throws Exception
 	{
 		FileInputStream file=new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\HIMS_P\\TestData\\NMProfile.xlsx");
 		Sheet excelSheet = WorkbookFactory.create(file).getSheet("TestData");
+		String value = excelSheet.getRow(row).getCell(col).getStringCellValue();
+	 	return value;
+	}
+	
+//NETWORK MEMBER CONTRACT	
+	public static String readExcelC(int row,int col) throws Exception {
+		FileInputStream file=new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\HIMS_P\\TestData\\NMContractTestData.xlsx");
+		Sheet excelSheet = WorkbookFactory.create(file).getSheet("data");
+		String value = excelSheet.getRow(row).getCell(col).getStringCellValue();
+	 	return value;
+	}
+
+//NETWORK MEMBER DIRECTORY	
+	public static String readExcelD(int row,int col) throws Exception {
+		FileInputStream file=new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\HIMS_P\\TestData\\NMDirectory.xlsx");
+		Sheet excelSheet = WorkbookFactory.create(file).getSheet("Sheet1");
 		String value = excelSheet.getRow(row).getCell(col).getStringCellValue();
 	 	return value;
 	}
